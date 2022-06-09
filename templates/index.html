@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<!-- Map left, Analysis right -->
+<div class="w-100">
+  <div class="container">
+    <div class="row">
+
+      <!-- Test image to spare google API quota -->
+      <div class="col-sm mt-2 px-2">
+        <div class="thumbnail">
+          <!--<img src="../static/imgs/sample3.JPG" alt="img" style="width:100%; height:80%">-->
+          <div id="map-container-google-3" class="z-depth-1-half map-container-3">
+            <iframe
+              style="border:0; width:100%; height:80%"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed/v1/search?key={{ api_key }}&q={{ query }}">
+            </iframe>
+          </div>
+          
+            <div class="caption">
+              <p>Map</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Analysis of screenshot -->
+      <div class="col-sm mt-2 px-2">
+        <div class="thumbnail">
+            <img src="../static/imgs/sandclock.png" alt="img" style="width:100%; height:80%">
+            <div class="caption">
+              <p>Color analysis (filter greens)</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Analysis text -->
+      <div class="col-sm mt-2 px-2">
+        <div class="thumbnail">
+            <img src="../static/imgs/sandclock.png" alt="img" style="width:100%; height:80%">
+            <div class="caption">
+              <p>Kmeans distribution pie (5 clusters)</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!--Submit button -->
+<div class="w-100">
+  <div class="container form-inline">
+    <div class="mb-3">
+      <form class="ml-auto" action="/" method="post" id="screenshot">
+        <!-- Search field -->
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" placeholder="search" type="text" id="query" name="query">
+        <!-- Search button -->
+        <button class="btn btn-primary" type="submit" formaction="/">Search</button>
+        <!-- Analysis button -->
+        <button class="btn btn-primary" type="submit" formaction="/analysis">Find parks</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Function to call screenshot and filter function upon button click -->
+<script type=text/javascript>
+  $(function() {
+    $('a#screenshot').on('click', function(e) {
+      e.preventDefault()
+      $.getJSON('/analysis',
+          function(data) {
+        //do nothing
+      });
+      return false;
+    });
+  });
+</script>
+
+{% endblock %}
+

@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Analysis
+{% endblock %}
+
+{% block main %}
+<!-- Map left, Analysis right -->
+<div class="w-100">
+  <div class="container">
+    <div class="row">
+
+      <!-- Test image to spare google API quota -->
+      <div class="col-sm mt-2 px-2">
+        <div class="thumbnail">
+          <img src="../static/screenshots/screenshot.jpg" alt="img" style="width:100%; height:80%">          
+            <div class="caption">
+              <p>Map (Maps Embed API)</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Analysis of screenshot -->
+      <div class="col-sm mt-2 px-2">
+        <div class="thumbnail">
+            <img src="../static/screenshots/analysis.jpg" alt="img" style="width:100%; height:80%">
+            <div class="caption">
+              <p>Color analysis (filter greens)</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Analysis text -->
+      <div class="col-sm mt-2 px-2">
+        <div class="thumbnail">
+            <img src="../static/screenshots/kmeans.jpg" alt="img" style="width:100%; height:80%">
+            <div class="caption">
+              <p>Kmeans distribution pie (5 clusters)</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!--Return button -->
+<div class="w-100">
+    <div class="container form-inline">
+      <div class="mb-3">
+        <form class="ml-auto" action="/" method="post">
+            <!-- Return button -->
+            <button class="btn btn-primary" type="submit">New analysis</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

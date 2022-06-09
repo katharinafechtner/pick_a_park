@@ -1,0 +1,27 @@
+/* Avoid scrolling to fix map for screenshot at same position every time */ 
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden
+}
+
+.container {
+    padding-right: 50px;
+    padding-left: 50px;
+    /*margin-right: 50px;
+    margin-left: 50px; */
+  }
+
+.navbar{
+    height: 80px;
+  }
+  
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    border-top: 3px solid; 
+  }
