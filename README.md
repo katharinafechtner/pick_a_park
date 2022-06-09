@@ -1,5 +1,5 @@
 # Pick a park - CS50x Final Project
-## Video Demo:  [<[YouTube video](https://youtu.be/eF5O-l2-Rk0)>]
+## Video Demo:  [YouTube video](https://youtu.be/eF5O-l2-Rk0)
 
 ## Description:
 This website allows the user to analyze a map area of his or her choice to find green areas. The original idea is to provide a way of finding potentially nice recreational areas in a city to train, meet friends, relax, etc.
