@@ -6,9 +6,9 @@ What the website does in short: The user enters the index page where an embedded
 
 ## General setup
 Visual studio code
-Windows OS
-Flask framework
-Languages: python (v3.8), HTML, CSS, Javascript
+- Windows OS
+- Flask framework
+- Languages: python (v3.8), HTML, CSS, Javascript
 
 ## Files
 - Python scripts:
