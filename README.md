@@ -1,22 +1,23 @@
 # Pick a park - CS50x Final Project
-## Introduction
+## Video Demo:  [<[YouTube video](https://youtu.be/eF5O-l2-Rk0)>]
+
+## Description:
 This website allows the user to analyze a map area of his or her choice to find green areas. The original idea is to provide a way of finding potentially nice recreational areas in a city to train, meet friends, relax, etc.
-
 What the website does in short: The user enters the index page where an embedded searchable dynamic map is displayed. The user can then focus on a map frame and analyze this area via button-click to mark potential green spaces. In addition, the color distribution of the chosen map frame is analyzed with kmeans clustering. The result is a pie chart displayed on the website.
-
+  
 ## General setup
 Visual studio code
 - Windows OS
 - Flask framework
 - Languages: python (v3.8), HTML, CSS, Javascript
-
+  
 ## Files
 - Python scripts:
   - app.py
   - screenshot.py
   - colorfilter.py
   - kmeans.py
-
+  
 - /static
   - /imgs
     - sample.jpg
